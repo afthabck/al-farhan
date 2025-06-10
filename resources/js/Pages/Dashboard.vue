@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 </script>
@@ -20,3 +20,36 @@ import Welcome from '@/Components/Welcome.vue';
         </div>
     </AppLayout>
 </template>
+ -->
+
+<script setup>
+import AppLayout from '@/Layouts/AppLayout.vue';
+import Welcome from '@/Components/Welcome.vue';
+</script>
+ <template>
+    <div class="page-content">
+      <!-- Dashboard content sections -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+        <div>
+          <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
+        </div>
+        <!-- Dashboard controls -->
+      </div>
+  
+      <div class="row">
+        <!-- Dashboard cards and charts -->
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'MainContent',
+    mounted() {
+      // Initialize dashboard scripts
+      if (window.initializeDashboard) {
+        window.initializeDashboard();
+      }
+    }
+  }
+  </script>
