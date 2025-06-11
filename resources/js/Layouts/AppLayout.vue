@@ -3,18 +3,19 @@
   import { ref } from 'vue';
 
   import { Head, Link, router } from '@inertiajs/vue3'
-  import Sidebar from './components/Layouts/Sidebar.vue'
-  import Header from './components/Layouts/Navbar.vue'
-  import Footer from './components/Layouts/Footer.vue'
-  import MainContent from './components/MainContent.vue'
-  
+    import Sidebar from './Sidebar.vue'
+    import Header from './Navbar.vue'
+    import Footer from './Footer.vue'
+
+
+
   export default {
     name: 'App',
     components: {
       Sidebar,
       Header,
       Footer,
-      MainContent
+
     }
   }
   </script>
@@ -23,15 +24,16 @@
       <Sidebar />
       <div class="page-wrapper">
         <Header />
-        <MainContent />
+             <slot /> <!-- This renders Dashboard.vue content -->
+
         <Footer />
       </div>
     </div>
   </template>
-  
-  
-  
+
+
+
   <style>
-  /* Import your CSS files here */
-  @import '../assets/css/style.css';
+
+
   </style>
