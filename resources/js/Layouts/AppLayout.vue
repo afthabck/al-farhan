@@ -8,7 +8,6 @@
     import Footer from './Footer.vue'
 
 
-
   export default {
     name: 'App',
     components: {

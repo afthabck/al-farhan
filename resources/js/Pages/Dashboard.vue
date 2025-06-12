@@ -1,14 +1,29 @@
+
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
-// re-initialize Feather icons after DOM is rendered
+// 👇 REMOVE THIS — doesn't work with Vite. Keep style.css in app.blade.php instead.
+// import '/public/assets/css/style.css'
+
+// Card data
+const cards = ref([
+  { title: 'New Customers', value: '3,897', growth: 3.3 },
+  { title: 'New Orders', value: '35,084', growth: -2.8 },
+  { title: 'Growth', value: '89.87%', growth: 2.8 }
+])
+
+// JS that runs after Vue mounts the DOM
 onMounted(() => {
-    if (window.feather) {
-        window.feather.replace()
-    }
+  // Feather Icons
+  if (window.feather) window.feather.replace()
+
+ if (window.initApexCharts) window.initApexCharts()
+
+
 })
 </script>
+
 
 <template>
   <AppLayout>
@@ -87,16 +102,6 @@ onMounted(() => {
   </AppLayout>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      cards: [
-        { title: 'New Customers', value: '3,897', growth: 3.3 },
-        { title: 'New Orders', value: '35,084', growth: -2.8 },
-        { title: 'Growth', value: '89.87%', growth: 2.8 }
-      ]
-    }
-  }
-}
-</script>
+
+
+

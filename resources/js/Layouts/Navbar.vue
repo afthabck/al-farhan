@@ -87,7 +87,7 @@ export default {
 
       <ul class="navbar-nav">
             <li class="nav-item dropdown" style="position: relative">
-                <a
+                <Link
                 href="#"
                 id="languageToggle"
                 class="nav-link dropdown-toggle"
@@ -95,7 +95,7 @@ export default {
                 >
                 <i class="flag-icon flag-icon-us mt-1" title="us"></i>
                 <span class="font-weight-medium ml-1 mr-1 d-none d-md-inline-block">English</span>
-                </a>
+                </Link>
 
                 <div
                 id="languageDropdownMenu"
