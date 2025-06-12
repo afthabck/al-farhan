@@ -16,14 +16,11 @@
         <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <!-- Scripts -->
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js" integrity="sha512-RtZU3AyMVArmHLiW0suEZ9McadTdegwbgtiQl5Qqo9kunkVg1ofwueXD8/8wv3Af8jkME3DDe3yLfR8HSJfT2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body class="font-sans antialiased">
         @inertia
