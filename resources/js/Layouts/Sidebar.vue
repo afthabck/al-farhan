@@ -1,6 +1,6 @@
 <script>
 import { Link } from '@inertiajs/vue3'
-import feather from 'feather-icons'
+
 
 export default {
   name: 'Sidebar',
@@ -53,39 +53,17 @@ export default {
             <span class="link-title">Dashboard</span>
           </Link>
         </li>
-
-        <li class="nav-item nav-category">Web Apps</li>
+        <li class="nav-item nav-category">Masters</li>
         <li class="nav-item">
-          <div
-            class="nav-link cursor-pointer flex justify-between items-center"
-            @click="emailMenuOpen = !emailMenuOpen"
-          >
+          <div class="nav-link cursor-pointer flex justify-between items-center">
             <div class="flex items-center gap-2">
               <i class="link-icon" data-feather="mail"></i>
-              <span class="link-title">Email</span>
+              <span class="link-title">Raw Materials</span>
             </div>
-            <i
-              class="link-arrow transition-transform"
-              :class="{ 'rotate-180': emailMenuOpen }"
-              data-feather="chevron-down"
-            ></i>
+           
           </div>
 
-          <ul
-            v-show="emailMenuOpen"
-            class="nav sub-menu pl-4 py-2 transition-all duration-300"
-          >
-            <li class="nav-item">
-              <Link href="/inbox" class="nav-link">Inbox</Link>
-            </li>
-            <li class="nav-item">
-              <Link href="/read" class="nav-link">Read</Link>
-            </li>
-            <li class="nav-item">
-              <Link href="/compose" class="nav-link">Compose</Link>
-            </li>
-          </ul>
-        </li>
+          </li>
       </ul>
     </div>
   </nav>

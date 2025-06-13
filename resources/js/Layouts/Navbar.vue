@@ -1,6 +1,6 @@
 <script>
 import { Link } from '@inertiajs/vue3'
-import feather from 'feather-icons'
+
 
 export default {
   name: 'Header',

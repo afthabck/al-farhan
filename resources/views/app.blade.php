@@ -10,39 +10,36 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        {{-- Noble Ui css --}}
-         <link rel="stylesheet" href="{{ asset('assets/vendors/feather/feather.css') }}">
+        <!-- Noble UI CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/vendors/feather/feather.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+
         <!-- Scripts -->
         @routes
-        @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
+        @vite(['resources/css/app.css','resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
+        <!-- Only load Vite assets here -->
+       
         @inertiaHead
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js" integrity="sha512-RtZU3AyMVArmHLiW0suEZ9McadTdegwbgtiQl5Qqo9kunkVg1ofwueXD8/8wv3Af8jkME3DDe3yLfR8HSJfT2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body class="font-sans antialiased">
         @inertia
 
-        <!-- NobleUI JS -->
+        <!-- Noble UI JS -->
+        <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
+        <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
+        <script src="{{ asset('assets/js/template.js') }}"></script>
+        <script src="{{ asset('assets/js/dashboard.js') }}"></script>
 
+        <!-- ApexCharts (CDN) -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="{{ asset('assets/js/apexcharts.js') }}"></script>
 
-    <!-- Noble UI JS -->
-    <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
-    <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('assets/js/template.js') }}"></script>
-    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+        <!-- Datepicker (requires jQuery) -->
+        <script src="{{ asset('assets/js/datepicker.js') }}"></script>
 
-    <!-- ApexCharts (CDN) -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="{{ asset('assets/js/apexcharts.js') }}"></script>
-
-    <!-- Datepicker (requires jQuery) -->
-    <script src="{{ asset('assets/js/datepicker.js') }}"></script>
-
-    <!-- Feather Icons -->
-    <script src="{{ asset('assets/vendors/feather-icons/feather.min.js') }}"></script>
-</script>
+        <!-- Feather Icons -->
+        <script src="{{ asset('assets/vendors/feather-icons/feather.min.js') }}"></script>
     </body>
 </html>
