@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SupplyManagementController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,5 +22,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    // supply management
+    Route::get('/supply-management', [SupplyManagementController::class,'index'])->name('supply-management');
+
+
 });
-Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+

@@ -1,38 +1,39 @@
+<script setup>
+import Sidebar from './Sidebar.vue'
+import Header from './Navbar.vue'
+import Footer from './Footer.vue'
+</script>
 
-<script>
-  import { ref } from 'vue';
-
-  import { Head, Link, router } from '@inertiajs/vue3'
-    import Sidebar from './Sidebar.vue'
-    import Header from './Navbar.vue'
-    import Footer from './Footer.vue'
-
-
-  export default {
-    name: 'App',
-    components: {
-      Sidebar,
-      Header,
-      Footer,
-
-    }
-  }
-  </script>
 <template>
-    <div class="main-wrapper">
-      <Sidebar />
-      <div class="page-wrapper">
-        <Header />
-             <slot /> <!-- This renders Dashboard.vue content -->
+  <div class="main-wrapper">
+    <Sidebar />
+    <div class="page-wrapper">
+      <Header />
 
-        <Footer />
-      </div>
+      <!-- Main content area with proper spacing -->
+      <main class="page-content">
+        <slot /> <!-- This will render your page content -->
+      </main>
+
+      <Footer />
     </div>
-  </template>
+  </div>
+</template>
 
+<style scoped>
+.main-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
 
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-  <style>
-
-
-  </style>
+.page-content {
+  flex: 1;
+  padding: 20px;
+}
+</style>

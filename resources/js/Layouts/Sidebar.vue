@@ -1,4 +1,5 @@
 <script>
+
 import { Link } from '@inertiajs/vue3'
 
 
@@ -48,10 +49,10 @@ export default {
       <ul class="nav">
         <li class="nav-item nav-category">Main</li>
         <li class="nav-item">
-          <Link href="/dashboard" class="nav-link">
+          <a href="/dashboard" class="nav-link">
             <i class="link-icon" data-feather="box"></i>
             <span class="link-title">Dashboard</span>
-          </Link>
+          </a>
         </li>
         <li class="nav-item nav-category">Masters</li>
         <li class="nav-item">
@@ -60,11 +61,29 @@ export default {
               <i class="link-icon" data-feather="mail"></i>
               <span class="link-title">Raw Materials</span>
             </div>
-           
+
           </div>
 
           </li>
+    <!-- Supply Management -->
+          <li class="nav-item nav-category">Supply Management</li>
+           <li class="nav-item">
+            <a
+                href="/supply-management"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="mail"></i>
+                <span class="link-title">Supply Management</span>
+                </div>
+            </a>
+        </li>
+
       </ul>
+
+
+
     </div>
   </nav>
 </template>
