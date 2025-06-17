@@ -54,17 +54,33 @@ export default {
             <span class="link-title">Dashboard</span>
           </a>
         </li>
+        <!-- Masters Type  -->
         <li class="nav-item nav-category">Masters</li>
-        <li class="nav-item">
-          <div class="nav-link cursor-pointer flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <i class="link-icon" data-feather="mail"></i>
-              <span class="link-title">Raw Materials</span>
-            </div>
-
-          </div>
-
-          </li>
+           <li class="nav-item">
+            <a
+                href="/material-type"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="layers"></i>
+                <span class="link-title">Material Type</span>
+                </div>
+            </a>
+        </li>
+        <!-- Machines -->
+         <li class="nav-item">
+            <a
+                href="/machines"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="tool"></i>
+                <span class="link-title">Machines</span>
+                </div>
+            </a>
+        </li>
     <!-- Supply Management -->
           <li class="nav-item nav-category">Supply Management</li>
            <li class="nav-item">

@@ -4,6 +4,7 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
+
 // import ApexCharts from 'vue3-apexcharts'; // 👈 Import here
 
 const appName =
