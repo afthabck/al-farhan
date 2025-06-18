@@ -81,6 +81,19 @@ export default {
                 </div>
             </a>
         </li>
+        <!-- process -->
+        <li class="nav-item">
+            <a
+                href="/process"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="repeat"></i>
+                <span class="link-title">Process</span>
+                </div>
+            </a>
+        </li>
     <!-- Supply Management -->
           <li class="nav-item nav-category">Supply Management</li>
            <li class="nav-item">

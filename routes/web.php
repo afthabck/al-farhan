@@ -3,6 +3,7 @@
 use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\SupplyManagementController;
 use App\Http\Controllers\MachineController;
+use App\Http\Controllers\ProcessController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -31,5 +32,7 @@ Route::middleware([
     Route::resource('/material-type',MaterialTypeController::class);
     //machines
     Route::resource('/machines',MachineController::class);
+    //process
+    Route::resource('/process',ProcessController::class);
 });
 
