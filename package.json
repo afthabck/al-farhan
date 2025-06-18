@@ -27,6 +27,7 @@
         "bootstrap": "^5.3.6",
         "feather-icons": "^4.29.2",
         "flag-icon-css": "^4.1.7",
+        "jquery": "^3.7.1",
         "vue3-apexcharts": "^1.8.0"
     }
 }

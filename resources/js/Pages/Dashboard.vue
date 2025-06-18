@@ -45,6 +45,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
+import '../../css/style.css';
 
 // Data for each card
 const cards = ref([
@@ -56,7 +57,7 @@ const cards = ref([
 onMounted(() => {
   // Feather Icons (must be available in global script)
   if (window.feather) window.feather.replace()
-  alert($.fn.jquery);
+
 
   // Render one chart per card
   cards.value.forEach((card, index) => {

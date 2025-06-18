@@ -1,4 +1,5 @@
 <script>
+
 import { Link } from '@inertiajs/vue3'
 
 
@@ -48,23 +49,57 @@ export default {
       <ul class="nav">
         <li class="nav-item nav-category">Main</li>
         <li class="nav-item">
-          <Link href="/dashboard" class="nav-link">
+          <a href="/dashboard" class="nav-link">
             <i class="link-icon" data-feather="box"></i>
             <span class="link-title">Dashboard</span>
-          </Link>
+          </a>
         </li>
+        <!-- Masters Type  -->
         <li class="nav-item nav-category">Masters</li>
-        <li class="nav-item">
-          <div class="nav-link cursor-pointer flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <i class="link-icon" data-feather="mail"></i>
-              <span class="link-title">Raw Materials</span>
-            </div>
-           
-          </div>
+           <li class="nav-item">
+            <a
+                href="/material-type"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="layers"></i>
+                <span class="link-title">Material Type</span>
+                </div>
+            </a>
+        </li>
+        <!-- Machines -->
+         <li class="nav-item">
+            <a
+                href="/machines"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="tool"></i>
+                <span class="link-title">Machines</span>
+                </div>
+            </a>
+        </li>
+    <!-- Supply Management -->
+          <li class="nav-item nav-category">Supply Management</li>
+           <li class="nav-item">
+            <a
+                href="/supply-management"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="mail"></i>
+                <span class="link-title">Supply Management</span>
+                </div>
+            </a>
+        </li>
 
-          </li>
       </ul>
+
+
+
     </div>
   </nav>
 </template>
