@@ -2,6 +2,9 @@
 import Sidebar from './Sidebar.vue'
 import Header from './Navbar.vue'
 import Footer from './Footer.vue'
+
+
+
 </script>
 
 <template>

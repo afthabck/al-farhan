@@ -1,10 +1,16 @@
 <script>
 
 import { Link } from '@inertiajs/vue3'
-
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/vue3'
 
 export default {
   name: 'Sidebar',
+  setup() {
+    const page = usePage()
+    const appName = computed(() => page.props.app_name)
+    return { appName }
+  },
   data() {
     return {
       showDropdown: false,
@@ -36,7 +42,8 @@ export default {
   <nav class="sidebar">
     <div class="sidebar-header">
       <a href="#" class="sidebar-brand">
-        Noble<span>UI</span>
+        <!-- Noble<span>UI</span> --> {{ appName }}
+
       </a>
       <div class="sidebar-toggler not-active" @click="toggleSidebar">
         <span></span>
@@ -105,6 +112,23 @@ export default {
                 <div class="flex items-center gap-2">
                 <i class="link-icon" data-feather="mail"></i>
                 <span class="link-title">Supply Management</span>
+                </div>
+            </a>
+        </li>
+
+        <!-- Admin Configuration Settings -->
+          <li class="nav-item nav-category">Admin Configuration Settings</li>
+          <br>
+
+           <li class="nav-item">
+            <a
+                href="/admin_settings"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="settings"></i>
+                <span class="link-title">Admin Settings</span>
                 </div>
             </a>
         </li>

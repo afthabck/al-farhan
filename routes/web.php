@@ -4,6 +4,7 @@ use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\SupplyManagementController;
 use App\Http\Controllers\MachineController;
 use App\Http\Controllers\ProcessController;
+use App\Http\Controllers\AdminConfigController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -34,5 +35,7 @@ Route::middleware([
     Route::resource('/machines',MachineController::class);
     //process
     Route::resource('/process',ProcessController::class);
+    //admin configuration settings
+    Route::resource('/admin_settings',AdminConfigController::class);
 });
 
