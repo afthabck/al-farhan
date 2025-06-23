@@ -101,6 +101,20 @@ export default {
                 </div>
             </a>
         </li>
+        <!-- Raw Materials -->
+         <li class="nav-item">
+            <a
+                href="/raw_materials"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="box"></i>
+                <span class="link-title">Raw Materials</span>
+                </div>
+            </a>
+        </li>
+
     <!-- Supply Management -->
           <li class="nav-item nav-category">Supply Management</li>
            <li class="nav-item">
