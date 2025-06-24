@@ -115,6 +115,20 @@ export default {
             </a>
         </li>
 
+        <!-- Size -->
+         <li class="nav-item">
+            <a
+                href="/sizes"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="maximize"></i>
+                <span class="link-title">Sizes</span>
+                </div>
+            </a>
+        </li>
+
     <!-- Supply Management -->
           <li class="nav-item nav-category">Supply Management</li>
            <li class="nav-item">

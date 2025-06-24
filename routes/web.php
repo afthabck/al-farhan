@@ -6,6 +6,7 @@ use App\Http\Controllers\MachineController;
 use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\AdminConfigController;
 use App\Http\Controllers\RawMaterialController;
+use App\Http\Controllers\SizeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -40,5 +41,7 @@ Route::middleware([
     Route::resource('/admin_settings',AdminConfigController::class);
     //raw materials
     Route::resource('/raw_materials',RawMaterialController::class);
+    //sizes
+    Route::resource('/sizes',SizeController::class);
 });
 
