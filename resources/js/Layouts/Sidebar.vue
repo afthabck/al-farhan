@@ -128,6 +128,32 @@ export default {
                 </div>
             </a>
         </li>
+          <!-- Thickness -->
+         <li class="nav-item">
+            <a
+                href="/thickness"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="maximize"></i>
+                <span class="link-title">Thickness</span>
+                </div>
+            </a>
+        </li>
+          <!-- Product -->
+         <li class="nav-item">
+            <a
+                href="/products"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="shopping-bag"></i>
+                <span class="link-title">Product</span>
+                </div>
+            </a>
+        </li>
 
     <!-- Supply Management -->
           <li class="nav-item nav-category">Supply Management</li>
