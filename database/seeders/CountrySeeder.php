@@ -13,7 +13,7 @@ class CountrySeeder extends Seeder
      */
     public function run(): void
     {
-        Country::truncate();
+        // Country::truncate();
 
 
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\RawMaterialController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ThicknessController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -49,5 +50,7 @@ Route::middleware([
     Route::resource('/thickness',ThicknessController::class);
     //product
     Route::resource('/products',ProductController::class);
+    //customers
+    Route::resource('/customers',CustomerController::class);
 });
 

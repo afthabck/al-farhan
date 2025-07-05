@@ -136,7 +136,7 @@ export default {
                 active-class="active-link"
             >
                 <div class="flex items-center gap-2">
-                <i class="link-icon" data-feather="maximize"></i>
+                <i class="link-icon" data-feather="sliders"></i>
                 <span class="link-title">Thickness</span>
                 </div>
             </a>
@@ -151,6 +151,19 @@ export default {
                 <div class="flex items-center gap-2">
                 <i class="link-icon" data-feather="shopping-bag"></i>
                 <span class="link-title">Product</span>
+                </div>
+            </a>
+        </li>
+           <!-- Customer-->
+         <li class="nav-item">
+            <a
+                href="/customers"
+                class="nav-link cursor-pointer flex justify-between items-center"
+                active-class="active-link"
+            >
+                <div class="flex items-center gap-2">
+                <i class="link-icon" data-feather="users"></i>
+                <span class="link-title">Customers</span>
                 </div>
             </a>
         </li>
