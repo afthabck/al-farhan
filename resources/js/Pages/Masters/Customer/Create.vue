@@ -1138,6 +1138,7 @@ function addContactPerson() {
   })
 }
 
+
 function removeContactPerson(index) {
   if (form.contact_persons.length > 1) {
     form.contact_persons.splice(index, 1)
