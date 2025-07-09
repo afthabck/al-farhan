@@ -158,7 +158,7 @@
               id="custCategory"
               name="customer_category"
               class="form-select slim-select"
-              v-model="form.company.category"
+              v-model="form.company.customer_category"
             >
               <option value="regular">Regular</option>
               <option value="normal">Normal</option>
@@ -242,6 +242,7 @@
               <option value="owner_details">Owner Details</option>
               <option value="others">Others</option>
             </select>
+             <div v-if="errors.document_type" class="text-danger small">{{ errors.document_type }}</div>
           </div>
 
           <div class="col-sm-6">
@@ -264,7 +265,7 @@
               <span class="upload-text">Upload</span>
             </label>
           </div>
-          <div v-if="errors.document_type" class="text-danger small">{{ errors.document_type }}</div>
+
 <div v-if="errors['company_documents.0']" class="text-danger small">{{ errors['company_documents.0'] }}</div>
         </div>
 

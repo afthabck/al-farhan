@@ -34,38 +34,38 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
 
-        //     $validated = $request->validate([
-        //     'company_name' => 'required|string|max:255',
-        //     'vat_tax_id' => 'required|string|max:50',
-        //     'customer_source' => 'nullable|string',
-        //     'website' => 'nullable|url',
-        //     'customer_code'=>'nullable',
-        //     'customer_type' => 'nullable|string',
-        //     'industry_type' => 'nullable|string',
-        //     'customer_category' => 'nullable|string',
-        //     'customer_industry' => 'nullable|string',
-        //     'logo' => 'nullable|image|max:2048',
-        //    'document_type' => 'nullable|string',
-        //     'company_documents.*' => 'nullable|file|mimes:pdf,jpg,jpeg,png,webp|max:5120',
+            $validated = $request->validate([
+            'company_name' => 'required|string|max:255',
+            'vat_tax_id' => 'required|string|max:50',
+            'customer_source' => 'required|string',
+            'website' => 'required|url',
+            'customer_code'=>'nullable',
+            'customer_type' => 'nullable|string',
+            'industry_type' => 'nullable|string',
+            'customer_category' => 'nullable|string',
+            'customer_industry' => 'nullable|string',
+            'logo' => 'nullable|image|max:2048',
+           'document_type' => 'required|string',
+            'company_documents.*' => 'required|file|mimes:pdf,jpg,jpeg,png,webp|max:5120',
 
-        //     // Example nested array validation
-        //     'addresses' => 'required|array|min:1',
-        //     'addresses.*.address' => 'required|string|max:255',
-        //     // Add more address fields here...
+            // Example nested array validation
 
-        //     'bank_accounts' => 'required|array|min:1',
-        //     'bank_accounts.*.account_holder_name' => 'required|string|max:255',
-        //     'bank_accounts.*.country_id' => 'required|string',
-        //     'bank_accounts.*.currency' => 'required|string',
-        //     'bank_accounts.*.bank_name' => 'required|string|max:255',
-        //     'bank_accounts.*.iban_account_number' => 'required|string|max:255',
-        //     'bank_accounts.*.documents.*' => 'nullable|file|mimes:pdf,jpg,jpeg,png,webp|max:5120',
 
-        //     'contact_persons' => 'required|array|min:1',
-        //     'contact_persons.*.full_name' => 'required|string|max:255',
-        //     'contact_persons.*.email' => 'nullable|email',
-        //     // Add more person fields...
-        // ]);
+            // Add more address fields here...
+
+            // 'bank_accounts' => 'required|array|min:1',
+            // 'bank_accounts.*.account_holder_name' => 'required|string|max:255',
+            // 'bank_accounts.*.country_id' => 'required|string',
+            // 'bank_accounts.*.currency' => 'required|string',
+            // 'bank_accounts.*.bank_name' => 'required|string|max:255',
+            // 'bank_accounts.*.iban_account_number' => 'required|string|max:255',
+            // 'bank_accounts.*.documents.*' => 'nullable|file|mimes:pdf,jpg,jpeg,png,webp|max:5120',
+
+            // 'contact_persons' => 'required|array|min:1',
+            // 'contact_persons.*.full_name' => 'required|string|max:255',
+            // 'contact_persons.*.email' => 'nullable|email',
+            // Add more person fields...
+        ]);
             $customer = new Customer();
             $customer->name = $request->company_name;
             $customer->VAT= $request->vat_tax_id;

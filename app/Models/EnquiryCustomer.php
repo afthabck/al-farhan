@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Customer extends Model
+class EnquiryCustomer extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'customers';
+    protected $table = 'enquiry_customers';
 
     protected $fillable = [
        'name','VAT/Tax Id','customer_source','customer_type','customer_code',
@@ -19,17 +19,17 @@ class Customer extends Model
 
     public function addresses()
 {
-    return $this->hasMany(R_F_Q_Customer_address::class);
+    return $this->hasMany(EnquiryCustomerAddress::class);
 }
 
 public function contactPersons()
 {
-    return $this->hasMany(R_F_Q_Customer_ponit_of_contact::class);
+    return $this->hasMany(EnquiryCustomerPointOfContact::class);
 }
 
 public function bankAccounts()
 {
-    return $this->hasMany( R_F_Q_Customer_Bank_Account::class);
+    return $this->hasMany( EnquiryCustomerBankAccount::class);
 }
 
 public function documents()

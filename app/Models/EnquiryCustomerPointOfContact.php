@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class R_F_Q_Customer_ponit_of_contact extends Model
+class EnquiryCustomerPointOfContact extends Model
 {
     use SoftDeletes;
+
+    protected $table='enquiry_customer_point_of_contacts';
 
     protected $fillable=[
         'customer_id','full_name','country_id','department','designation',
